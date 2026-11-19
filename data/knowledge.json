@@ -1,0 +1,83 @@
+[
+  {
+    "id": "darglobal-company",
+    "title": "DarGlobal: international luxury real estate company",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/?lang=en",
+    "text": "DarGlobal is an international luxury real estate developer, investor and asset manager listed on the London Stock Exchange. It develops residential and mixed-use properties, masterplanned communities and hospitality-led destinations. Its official website describes markets including the UAE, Saudi Arabia, Qatar, Spain and London, and collaborations with automotive, fashion and hospitality brands. DarGlobal is the company behind a portfolio of developments, rather than the name of one individual property project.",
+    "collected_at": "2026-11-19",
+    "method": "web-extraction"
+  },
+  {
+    "id": "dg1",
+    "title": "DG1: Business Bay apartments, Dubai",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/dg1",
+    "text": "DG1 is a residential tower beside Dubai Canal in Business Bay, Dubai, United Arab Emirates (UAE). The developer page lists studios and one-, two- and three-bedroom units, 452–2,476 sqft, and status Under Development. Amenities listed: gym, infinity swimming pool, landscaped podium, 24-hour reception, sky garden and yoga studio. The captured page does not provide a current asking price or confirmed unit availability.",
+    "collected_at": "2026-11-19",
+    "method": "web-extraction"
+  },
+  {
+    "id": "les-vagues",
+    "title": "Les Vagues by Elie Saab: Doha residences",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/les-vagues",
+    "text": "Les Vagues is a branded seafront residential complex on Qetaifan Island North, Doha, Qatar, with interiors by the Elie Saab brand. One-, two- and three-bedroom apartments are listed. Amenities include a fitness centre, infinity pool, reception, parking and landscaped courtyard. Size conflict: the summary says 84–383 sqm; the FAQ says 86–389 sqm. Verify unit specifications directly. The FAQ describes completion as scheduled for December 2027, a developer statement rather than a guarantee. Current asking prices and live availability are not provided in this capture.",
+    "collected_at": "2026-11-19",
+    "method": "web-extraction"
+  },
+  {
+    "id": "tierra-viva",
+    "title": "Tierra Viva: Lamborghini-inspired villas in Spain",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/tierra-viva",
+    "text": "Tierra Viva is a limited collection of villas in Benahavis (Benahavís), Spain, with design inspired by Automobili Lamborghini and Mediterranean views. Amenities include a gated community, 24/7 security, sauna, steam room and private pool areas; selected villas have a car lift. Size conflict: the page summary gives 680–1,515 sqm, while its FAQ gives 700–1,450 sqm. Confirm exact specifications with the developer. The FAQ describes completion as scheduled for June 2028, not guaranteed. No current asking price or live unit availability is provided in this capture.",
+    "collected_at": "2026-11-19",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-platform",
+    "title": "Wasalt: Saudi property search and services",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en",
+    "text": "Wasalt is a Saudi Arabia real estate platform for buying, selling and renting. Its public site includes apartments, villas and land, projects, masterplans, daily rentals and online auctions. Search categories include Riyadh, Jeddah, Makkah and Madinah. Wasalt Auctions supports timed sales including private and Infath auctions. Matchmaker matches leads to live listings using property type, purpose, district and category. These are platform descriptions, not a guarantee about a particular listing.",
+    "collected_at": "2026-11-19",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-listing-help",
+    "title": "Listing a property and signing in to Wasalt",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en",
+    "text": "To list a property on Wasalt, create an account, enter property details, upload photos and set a price through its app, business app or website. Sign-in uses the profile icon or app menu, then a mobile number and OTP verification. The chatbot cannot sign in, submit a listing or contact a broker on your behalf.",
+    "collected_at": "2026-11-19",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-corporate",
+    "title": "Wasalt products: search, auctions and masterplans",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/corporate",
+    "text": "Wasalt describes itself as a PropTech company. Its product areas include AI-backed property search, online and hybrid real estate auctions, and projects and masterplans with online plot reservations. The website also directs users to its app to connect with brokers.",
+    "collected_at": "2026-11-19",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-jeddah-3br",
+    "title": "Wasalt snapshot: three-bedroom apartment in Jeddah",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/property/sale/apartment-with-3-bedrooms-5972197",
+    "text": "A captured Wasalt sale listing in Jeddah, Saudi Arabia, describes an unfurnished three-bedroom apartment with three bathrooms. The asking price shown is SAR 340,000. Listed features include indoor parking, split AC and an elevator. This is one dated listing, not a citywide price estimate or confirmation of current availability. Seller names, contact details, licences and street addresses are excluded.",
+    "collected_at": "2026-11-19",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-jeddah-2br",
+    "title": "Wasalt snapshot: two-bedroom apartment in Jeddah",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/property/sale/apartment-with-2-bedrooms-5972081",
+    "text": "A captured Wasalt sale listing in Jeddah, Saudi Arabia, describes an unfurnished two-bedroom apartment with two bathrooms. The asking price shown is SAR 280,000. Listed features include indoor parking, split AC and an elevator. This is one dated listing, not a citywide price estimate or confirmation of current availability. Seller names, contact details, licences and street addresses are excluded.",
+    "collected_at": "2026-11-19",
+    "method": "web-extraction"
+  }
+]
