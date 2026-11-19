@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore DarGlobal projects and Wasalt property information with source-linked answers.">
+  <title>Property Desk</title>
+  <link rel="preload" href="/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#question">Skip to question</a>
+  <aside id="sidebar-panel" class="sidebar" aria-label="Property Desk navigation">
+    <a class="brand" href="/" aria-label="Property Desk home"><span class="brand-mark" aria-hidden="true">▥</span>Property Desk<span class="brand-period">.</span></a>
+    <button id="reset" class="new-chat" type="button"><span aria-hidden="true">＋</span> New conversation</button>
+    <details class="saved-history" open>
+      <summary>Conversations on this browser</summary>
+      <p class="history-help">Anyone using this browser profile can read these chats. No cross-device sync.</p>
+      <ul id="saved-list" aria-label="Saved conversations"></ul>
+      <p id="history-empty" class="history-help">Your completed conversations will appear here.</p>
+      <button id="clear-history" class="history-clear" type="button" disabled>Clear all saved chats</button>
+      <p class="history-help">Keeps up to 20 conversations and the latest 40 messages in each.</p>
+    </details>
+    <div class="sidebar-content">
+      <p class="eyebrow">Explore</p>
+      <button class="suggestion" data-question="What amenities does DG1 offer?" type="button">Explore DG1 in Dubai <span aria-hidden="true">↗</span></button>
+      <button class="suggestion" data-question="Tell me about Tierra Viva villas in Spain." type="button">Discover villas in Spain <span aria-hidden="true">↗</span></button>
+      <button class="suggestion" data-question="How do I list a property on Wasalt?" type="button">Understand Wasalt <span aria-hidden="true">↗</span></button>
+      <div class="coverage"><p class="eyebrow">Source collection</p><p class="source-darglobal">DarGlobal <span>Company & projects</span></p><p class="source-wasalt">Wasalt <span>Services & selected listings</span></p></div>
+    </div>
+    <p class="sidebar-note">An independent research demo.<br>Answers linked to their sources.</p>
+  </aside>
+  <main>
+    <header><div class="header-start"><button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-controls="sidebar-panel" aria-expanded="true" aria-label="Hide sidebar"><span aria-hidden="true">☰</span></button><span class="header-label">Your property research desk</span></div><span id="snapshot" class="snapshot" title="The date this saved source information was collected. Listings are not updated live.">Checking source date…</span></header>
+    <div class="conversation">
+      <section id="welcome" aria-labelledby="welcome-title">
+        <p class="eyebrow source-pair"><span class="source-darglobal">DarGlobal</span><span class="pair-divider" aria-hidden="true">/</span><span class="source-wasalt">Wasalt</span></p>
+        <h1 id="welcome-title">Explore properties.<br>Start with a question.</h1>
+        <p class="intro">Get to know DarGlobal, compare its projects, or explore selected Wasalt listings. Ask in your own words and follow the sources behind each answer.</p>
+        <div class="starters" aria-label="Suggested questions">
+          <button class="suggestion" data-question="What is DarGlobal and which projects are covered here?" type="button">Get to know DarGlobal <span aria-hidden="true">↗</span></button>
+          <button class="suggestion" data-question="Compare DG1 and Les Vagues amenities." type="button">Compare DG1 and Les Vagues <span aria-hidden="true">↗</span></button>
+          <button class="suggestion wasalt-starter" data-question="Which captured Jeddah apartment has the lower asking price?" type="button">Compare Jeddah asking prices <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="scope-note"><strong>Saved sources, not live inventory.</strong> Confirm current prices, sizes and availability with the linked source.</p>
+      </section>
+      <section id="messages" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions"></section>
+    </div>
+    <div class="composer-area">
+      <p id="history-notice" role="status" class="history-help"></p>
+      <p id="status" role="status" aria-live="polite"></p>
+      <p id="error" role="alert" hidden></p>
+      <form id="composer">
+        <label class="sr-only" for="question">Your property question</label>
+        <textarea id="question" name="question" rows="2" maxlength="1200" placeholder="What would you like to know?" required></textarea>
+        <button id="send" type="submit" aria-label="Send question"><span aria-hidden="true">↑</span></button>
+      </form>
+      <p class="privacy">Chats are saved in this browser after a reply. Anyone using this browser profile can read them; delete them from the sidebar. New AI requests send messages and selected sources to OpenRouter and its providers. Don’t include personal details.</p>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Chatbot runtime dependencies; versions are pinned in constraints.txt.
+-c constraints.txt
+fastapi
+uvicorn
+httpx
+beautifulsoup4
