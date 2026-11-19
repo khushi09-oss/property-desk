@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.vercel/
+.private/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
