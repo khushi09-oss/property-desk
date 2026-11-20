@@ -150,7 +150,7 @@ function message(role, text, sources = [], cached = false) {
     const list = document.createElement('div');
     list.className = 'sources';
     const title = document.createElement('p');
-    title.textContent = 'CHECK THE ORIGINAL SOURCES';
+    title.textContent = 'Sources';
     list.append(title);
     for (const source of validSources(sources)) {
       const url = new URL(source.url);

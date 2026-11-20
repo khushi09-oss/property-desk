@@ -59,6 +59,8 @@ This is saved source information, not an exhaustive catalogue or live inventory.
 
 ## History, caching and privacy
 
+The sidebar focuses on recent chats, with secondary exploration under About this demo. Privacy and source notes expand beneath the compact composer; the saved-source notice stays visible. The conversation scrolls independently of the sidebar and composer.
+
 Completed exchanges and citations are saved in localStorage for the current site/browser profile. Users can reopen or delete a conversation and confirm Clear all. New conversation preserves earlier chats. Limits are 20 conversations, the latest 40 messages each, and a 1 MB application payload. Storage failures leave the current chat usable with a warning.
 
 Anyone using the same browser profile can read saved chats. They are not encrypted or synced across devices, and clearing site data can erase them. There are no accounts or server conversation database. Provider retention is separate from local deletion; avoid entering personal information.
@@ -115,7 +117,11 @@ node --test tests/*.test.mjs
 docker build -t property-desk:local .
 ```
 
-Publication-snapshot checks passed: **64 Python tests and 17 JavaScript tests**, Ruff (including application/script security rules), mypy (eight source files), JavaScript syntax and dependency consistency. The root Docker build passed; a read-only Linux container served five HTTP routes, reported nine records, handled missing configuration explicitly and ran as UID 10001. Its files contained no local credentials or working material. The release script prepared the expected 21 runtime files. These checks made zero live inference requests. The current deployed runtime previously passed HTTP asset/health/schema checks, and cache behavior was exercised in a Linux container using synthetic model responses. Live provider cache warming and recent end-to-end AI readiness remain unverified following an exhausted free-model quota. No inference calls are made by the automated unit tests.
+Current source checks passed: **64 Python tests and 17 JavaScript tests**, Ruff (including application/script security rules), mypy (eight source files), JavaScript syntax and dependency consistency. Unit tests make no live inference requests.
+
+The interface simplification is deployed. Vercel built the root Dockerfile successfully from the 21 allowlisted runtime files. Five anonymous public assets matched the reviewed files byte-for-byte, health reported nine records, and a fresh uncached DarGlobal request returned HTTP 200 with four sources. Real-browser visual verification remains incomplete.
+
+The previously checked read-only Linux container served five HTTP routes, handled missing configuration explicitly, and ran as UID 10001. Its inspected files contained no local credentials or working material. Cache behavior was exercised with synthetic model responses; live cache warming remains unverified.
 
 Free quotas, provider capacity and latency can interrupt this public demo. Cross-browser, real-device, full accessibility, prolonged chatbot-idle and high-load verification remain incomplete. Hosting is serverless; continuous process uptime is not claimed. See [SPEC.md](SPEC.md) for the implemented requirements and decisions.
 
