@@ -26,7 +26,8 @@ def send(app, method, path, **kwargs):
 def test_health_reports_snapshot_without_secrets(client):
     response = send(client, "GET", "/api/health")
     assert response.status_code == 200
-    assert response.json()["documents"] == 9
+    assert response.json()["documents"] == 23
+    assert response.json()["snapshot_date"] == "2026-11-20"
     assert "OPENROUTER" not in response.text
     assert "default-src 'self'" in response.headers["Content-Security-Policy"]
 
@@ -112,6 +113,7 @@ def test_no_evidence_does_not_call_a_model(client):
     assert response.status_code == 200
     assert response.json()["model"] is None
     assert response.json()["sources"] == []
+    assert "rental" in response.json()["answer"]
 
 
 def test_returns_answer_and_sources_with_a_configured_backend(client, monkeypatch):
@@ -239,3 +241,32 @@ def test_third_concurrent_request_is_rejected_without_queueing(client, monkeypat
 )
 def test_private_files_are_not_served(client, path):
     assert send(client, "GET", path).status_code == 404
+
+
+@pytest.mark.parametrize(
+    "question,expected",
+    [
+        ("The Astera amenities", "the-astera"),
+        ("Wasalt Dammam Badr apartment", "wasalt-dammam-badr-5br"),
+        ("Wasalt Al-Murooj monthly rent", "wasalt-riyadh-murooj-rent"),
+    ],
+)
+def test_expanded_sources_reach_model_and_return_dated_citations(client, monkeypatch, question, expected):
+    monkeypatch.setenv("OPENROUTER_API_KEY", "synthetic-key")
+
+    async def respond(question, documents, history, key):
+        doc = next(doc for doc in documents if doc.id == expected)
+        assert str(doc.collected_at) == "2026-11-20"
+        number = str(documents.index(doc) + 1)
+        return ChatResponse(
+            answer=f"Captured source facts [{number}].",
+            sources=[Source(id=number, title=doc.title, url=doc.url, collected_at=doc.collected_at)],
+            model="example/model:free",
+        )
+
+    monkeypatch.setattr(main, "generate_answer", respond)
+    response = send(client, "POST", "/api/chat", json={"question": question})
+    assert response.status_code == 200
+    source = response.json()["sources"][0]
+    assert source["collected_at"] == "2026-11-20"
+    assert source["url"] == main.Knowledge.load().by_id[expected].url

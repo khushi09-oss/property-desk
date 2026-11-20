@@ -47,7 +47,14 @@ The model is `openrouter/free`; OpenRouter selects the underlying free model. Th
 
 ## Source data and collection
 
-`data/knowledge.json` contains **nine curated factual records from eight official pages**, collected through web extraction on **19 November 2026**. It covers DarGlobal's company overview, DG1, Les Vagues, Tierra Viva, Wasalt services and two Jeddah apartment examples. Each record retains its source URL, collection date and method.
+`data/knowledge.json` contains **23 curated factual records from 22 official pages**. The original nine records were collected on **19 November 2026**; fourteen additional pages were reviewed through web extraction on **20 November 2026**. Each record retains its own source URL, collection date and method. Extraction may use cached source content; the collection date does not establish live availability.
+
+| Coverage | Included information |
+| --- | --- |
+| DarGlobal | Company overview and ten development/community overviews: DG1, Les Vagues, Tierra Viva, The Astera, Marea, AIDA, Urban Oasis, Da Vinci Tower, W Residences and Trump Tower Jeddah. Locations span the UAE, Qatar, Spain, Oman and Saudi Arabia. |
+| Wasalt | Platform/listing services and nine property examples across Riyadh, Jeddah and Dammam: sale apartments, a villa, residential land and rental apartments. Monthly/yearly periods and land/built-up areas are distinguished. |
+
+Try "The Astera amenities", "Compare Marea and Tierra Viva", "Wasalt Dammam Badr apartment", or "Al-Murooj monthly rent". Retrieval returns at most four sources, so broad answers describe a selection rather than the entire portfolio or market.
 
 This is saved source information, not an exhaustive catalogue or live inventory. Conflicting size claims are retained; planned completion dates are developer statements. Confirm current prices and availability with the linked official sources. Seller/contact details, licence identifiers and street addresses are excluded.
 
@@ -55,7 +62,7 @@ This is saved source information, not an exhaustive catalogue or live inventory.
 .\.venv\Scripts\python.exe -m app.collect
 ```
 
-**Collection limitation:** source restrictions blocked all five pages in the recorded direct-HTTP collection run. The reviewed initial dataset came from web extraction. The collector writes a private review report and never silently replaces the snapshot. Successful unattended refresh is not claimed.
+**Collection limitation:** source restrictions blocked all five pages in the recorded direct-HTTP collection run. The reviewed initial dataset came from web extraction. The collector now derives its deduplicated URL list from the validated snapshot, reviews each official URL once per run, and writes a private review report without replacing the dataset. The expanded URL list is covered by synthetic tests; a successful live direct-HTTP refresh is not claimed.
 
 ## History, caching and privacy
 
@@ -117,11 +124,11 @@ node --test tests/*.test.mjs
 docker build -t property-desk:local .
 ```
 
-Current source checks passed: **64 Python tests and 17 JavaScript tests**, Ruff (including application/script security rules), mypy (eight source files), JavaScript syntax and dependency consistency. Unit tests make no live inference requests.
+Current source checks passed: **86 Python tests and 17 JavaScript tests**, Ruff (including application/script security rules), mypy (eight source files), JavaScript syntax and dependency consistency. Unit tests make no live inference requests.
 
-The interface simplification is deployed. Vercel built the root Dockerfile successfully from the 21 allowlisted runtime files. Five anonymous public assets matched the reviewed files byte-for-byte, health reported nine records, and a fresh uncached DarGlobal request returned HTTP 200 with four sources. Real-browser visual verification remains incomplete.
+The interface simplification is deployed with the previous nine-record snapshot. The 23-record coverage expansion is local and has not been published or deployed. Vercel built the root Dockerfile successfully from the 21 allowlisted runtime files. Five anonymous public assets matched the reviewed files byte-for-byte, health reported nine records, and a fresh uncached DarGlobal request returned HTTP 200 with four sources. Real-browser visual verification remains incomplete.
 
-The previously checked read-only Linux container served five HTTP routes, handled missing configuration explicitly, and ran as UID 10001. Its inspected files contained no local credentials or working material. Cache behavior was exercised with synthetic model responses; live cache warming remains unverified.
+The root Dockerfile builds the expanded dataset successfully. A local read-only container ran as UID 10001, reported 23 records dated through 20 November, and denied private-file routes. Two live OpenRouter checks returned HTTP 200 with the intended new source: The Astera amenities and Al-Murooj monthly/yearly rent. Fourteen named-topic retrieval cases find their intended record within the first two results; this is a targeted regression set, not a general answer-accuracy benchmark. The previously checked read-only Linux container served five HTTP routes, handled missing configuration explicitly, and ran as UID 10001. Its inspected files contained no local credentials or working material. Cache behavior was exercised with synthetic model responses; live cache warming remains unverified.
 
 Free quotas, provider capacity and latency can interrupt this public demo. Cross-browser, real-device, full accessibility, prolonged chatbot-idle and high-load verification remain incomplete. Hosting is serverless; continuous process uptime is not claimed. See [SPEC.md](SPEC.md) for the implemented requirements and decisions.
 

@@ -79,5 +79,131 @@
     "text": "A captured Wasalt sale listing in Jeddah, Saudi Arabia, describes an unfurnished two-bedroom apartment with two bathrooms. The asking price shown is SAR 280,000. Listed features include indoor parking, split AC and an elevator. This is one dated listing, not a citywide price estimate or confirmation of current availability. Seller names, contact details, licences and street addresses are excluded.",
     "collected_at": "2026-11-19",
     "method": "web-extraction"
+  },
+  {
+    "id": "the-astera",
+    "title": "The Astera: Aston Martin interiors, Ras Al Khaimah",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/the-astera",
+    "text": "The Astera is a DarGlobal beachfront development on Al Marjan Island, Ras Al Khaimah, UAE, with interiors by Aston Martin. It offers one- to three-bedroom residences and three-bedroom beach villas. The page lists Under Development; its FAQ schedules handover for December 2028, a developer statement rather than a guarantee. Amenities include direct beach access, infinity pool, spa, sauna, fitness centre, indoor cinema, yoga lawn, multipurpose hall, children's play area and 24/7 security. Size conflict: the summary shows 682-12,277 sqft while the FAQ gives 61-265 sqm; these ranges do not reconcile, so confirm exact unit specifications. Current pricing and live availability are not verified.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "marea",
+    "title": "Marea: Missoni residences in Costa del Sol, Spain",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/marea",
+    "text": "Marea, Interiors by Missoni, is a DarGlobal gated residential community within Finca Cortesin on Costa del Sol, Spain. It offers two-, three- and four-bedroom residences. Amenities include infinity pool, gym, tennis courts, community garden, hanging observation deck, children's pool and playground, concierge, parking, storage and 24/7 security. Size conflict: the summary gives 147-382 sqm; the FAQ gives 223-553 sqm. Confirm unit specifications. The page labels the project Under Development; the FAQ states phase 1 completed in 2024 and full completion is scheduled for December 2027. These are developer statements, not independent delivery verification or guarantees. Current prices and availability are not verified.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "aida",
+    "title": "AIDA: Muscat coastal community and golf destination, Oman",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/landing-page/aida",
+    "text": "AIDA by DarGlobal is a masterplanned gated coastal community and golfing destination in Muscat, Oman, elevated 130 metres above sea level. The page describes apartments, villas, hotel residences and branded or non-branded residences. Named collections include Trump Golf Villas, Trump Cliff Villas, Fairway Villas and Azure Oceanfront Villas with interiors by Fendi Casa. Community facilities include Trump International Golf Club Oman, beach access, swimming pools, fitness and wellness centres, parks, hiking and running trails, mountain-bike trails, viewing decks, restaurants and children's splash areas. Individual collections have different specifications; this overview does not establish unit prices, sizes, completion dates or current availability. Confirm details for the chosen collection.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "urban-oasis",
+    "title": "Urban Oasis by Missoni: completed Dubai Canal residences",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/urban-oasis-by-missoni",
+    "text": "Urban Oasis by Missoni is a DarGlobal branded residential tower directly on Dubai Canal, UAE, with interiors by Missoni. The captured page marks it Completed and Sold Out. It describes one-, two- and three-bedroom residences and penthouses. The summary displays areas of 323-3,828 sqft. Listed amenities include infinity pool, gym, grand entrance, retail, covered parking and 24/7 concierge. Completed and sold-out labels are the developer's captured statements, not a live inventory check. Any resale opportunities or current asking prices require direct confirmation; the chatbot cannot book a unit.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "davinci-tower",
+    "title": "Da Vinci Tower: Pagani interiors, Downtown Dubai",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/davinci-tower-by-pagani",
+    "text": "Da Vinci Tower, also written DaVinci Tower, is a DarGlobal residential development in Downtown Dubai on the Dubai Canal, with interiors by Pagani Automobili. The page marks it Completed and describes two-, three- and four-bedroom residences. Amenities include a rooftop pool, gym, sauna and steam rooms, 24/7 concierge and private elevator access. Size conflict: the summary shows 800-14,768 sqft, while the FAQ describes 77-398 sqm; the ranges do not reconcile. Confirm exact unit specifications. Completed is a captured developer status, not an independent delivery inspection. No current asking price or live unit availability is established.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "w-residences",
+    "title": "W Residences: completed Downtown Dubai branded apartments",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/w-residences",
+    "text": "W Residences Dubai - Downtown is a DarGlobal branded residential tower in partnership with W Hotels, part of the Marriott portfolio. It offers one-, two- and three-bedroom apartments; the summary gives 701-7,627 sqft and marks it Completed and Sold Out. Amenities include W Lounge, clubhouse, fitness centre, private cinema, game room, co-working space and meeting rooms, infinity outdoor pool, guest suites, and a terrace with dining and walking areas. These are captured developer descriptions and status labels. Secondary-market availability and prices are not verified and must be checked directly.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "trump-tower-jeddah",
+    "title": "Trump Tower Jeddah: Corniche seafront apartments and penthouses",
+    "publisher": "DarGlobal",
+    "url": "https://darglobal.co.uk/trump-tower-jeddah",
+    "text": "Trump Tower Jeddah is a DarGlobal 47-floor seafront residential tower on the Jeddah Corniche, Saudi Arabia. It lists one- to four-bedroom apartments and three- and four-bedroom penthouses, 70-365 sqm. Amenities include Trump Private Club, 24/7 concierge, meeting rooms, cigar lounge, dining, gym, yoga zone, pool, children's pool and jacuzzi. The FAQ describes the project as under development with completion scheduled for December 2029, a developer statement rather than a guarantee. The page says DarGlobal Holdings Real Estate owns and develops the property under a Trump name/mark licence; the Trump Organization is not its owner, developer or seller. Current prices and availability are not verified.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-riyadh-nadheem-2br",
+    "title": "Wasalt: An-Nadheem two-bedroom apartment for sale, Riyadh",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/property/sale/apartment-7128-sqm-with-2-bedrooms-5972147",
+    "text": "A captured Wasalt sale listing in An-Nadheem, East Riyadh, Saudi Arabia, describes a two-bedroom residential apartment with 71.28 sqm built-up area. Its displayed asking price is SAR 380,000. This is one dated asking-price example, not a completed transaction, citywide price estimate or confirmation of current availability. Verify measurements, price and availability on the official listing. Seller names, telephone numbers, licence identifiers and street addresses are excluded.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-riyadh-qadisiyah-3br",
+    "title": "Wasalt: Al-Qadisiyah three-bedroom apartment for sale, Riyadh",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/property/sale/apartment-1013-sqm-with-3-bedrooms-5934940",
+    "text": "A captured Wasalt sale listing in Al-Qadisiyah, East Riyadh, Saudi Arabia, describes a three-bedroom apartment with 101.3 sqm built-up area, marked New. It states a 2026 building year and electricity connections. The asking price is SAR 690,000. This is one dated listing, not a citywide price estimate or confirmation of current availability. Check the official page for current terms. Seller names, contact details, licence identifiers and street addresses are excluded.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-riyadh-sedra-villa",
+    "title": "Wasalt: Sedra four-bedroom villa for sale, Riyadh",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/property/sale/villa-252-sqm-facing-south-on-18m-width-street-5971798",
+    "text": "A captured Wasalt sale listing in Sedra, Riyadh, Saudi Arabia, describes a new four-bedroom residential villa. The structured fields identify 252 sqm as land area, not built-up area, and the description separately gives 305 sqm built-up area. It faces south on an 18-metre-wide street. The displayed asking amount is 3,990,000; confirm currency and current terms on the official listing. These are seller-provided listing statements, not an inspection or a confirmation of current availability. Names, contact details, licence identifiers and street addresses are excluded.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-riyadh-murooj-rent",
+    "title": "Wasalt: Al-Murooj furnished one-bedroom rental, Riyadh",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/property/rent/furnished-apartment-with-1-bedroom-5972169",
+    "text": "A captured Wasalt rental listing in Al-Murooj, North Riyadh, Saudi Arabia, describes a furnished one-bedroom apartment with one bathroom, one living room and 60 sqm built-up area. The page displays 5,000 monthly and 60,000 yearly; confirm currency, contract terms, deposits and extra charges directly. Monthly and yearly amounts refer to rental periods, not purchase prices. This is one dated listing; availability and condition are not independently verified. Seller names, telephone numbers, licence identifiers and street addresses are excluded.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-jeddah-obhur-rent",
+    "title": "Wasalt: Obhur four-bedroom yearly rental, Jeddah",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/property/rent/apartment-1000-sqm-with-4-bedrooms-5898684",
+    "text": "A captured Wasalt rental listing in Obhur Al Janoubeyyah (Abhur Al Janubiyah), North Jeddah, Saudi Arabia, describes an apartment with four bedrooms. The displayed rent is 49,990 yearly; confirm currency and contract terms directly. Area conflict: the structured field says 1000 sqm built-up area, while the description says 180 sqm. Do not silently choose either measurement; verify it with the official source. The description mentions an elevator and private parking. This is a dated asking-rent example, not a citywide estimate or confirmation of availability. Contacts, seller names, licence identifiers and street addresses are excluded.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-dammam-badr-5br",
+    "title": "Wasalt: Badr five-bedroom apartment for sale, Dammam",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/property/sale/apartment-17215-sqm-with-5-bedrooms-5947076",
+    "text": "A captured Wasalt sale listing in Badr, Dammam (Aldammam), Saudi Arabia, describes a five-bedroom apartment with 172.15 sqm built-up area. Its asking price is SAR 450,000. The page shows age 10+ years and building year 2015, with electricity and water connections. These are listing statements, not an independently verified condition report or confirmation of current availability. This example does not establish typical Dammam prices. Seller names, telephone numbers, licence identifiers and street addresses are excluded.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
+  },
+  {
+    "id": "wasalt-riyadh-oraid-land",
+    "title": "Wasalt: Oraid residential land for sale, Riyadh",
+    "publisher": "Wasalt",
+    "url": "https://wasalt.sa/en/property/sale/land-43207-sqm-facing-south-on-15m-width-street-5959010",
+    "text": "A captured Wasalt sale listing in Oraid, South Riyadh, Saudi Arabia, describes residential land of 432.07 sqm facing south on a 15-metre-wide street, with electricity and water connections. Asking-price conflict: the main price and one description line give SAR 648,000, while a later description line gives SAR 648,105. Do not silently choose one as the confirmed price. The page also displays 1,500 per sqm. Confirm measurements, price and current availability directly. This is one dated land example, not a citywide valuation. Seller names, contact details, licence identifiers and street addresses are excluded.",
+    "collected_at": "2026-11-20",
+    "method": "web-extraction"
   }
 ]
