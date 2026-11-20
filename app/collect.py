@@ -10,15 +10,8 @@ from urllib.robotparser import RobotFileParser
 import httpx
 from bs4 import BeautifulSoup
 
-from app.knowledge import HOSTS, ROOT
+from app.knowledge import HOSTS, ROOT, Knowledge
 
-SEEDS = (
-    "https://darglobal.co.uk/dg1",
-    "https://darglobal.co.uk/les-vagues",
-    "https://darglobal.co.uk/tierra-viva",
-    "https://wasalt.sa/en",
-    "https://wasalt.sa/en/corporate",
-)
 AGENT = "PropertyResearchAssignment"
 
 
@@ -95,7 +88,7 @@ def main() -> None:
     }
     pages = []
     with httpx.Client(timeout=15, follow_redirects=False) as client:
-        for url in SEEDS:
+        for url in dict.fromkeys(doc.url for doc in Knowledge.load().documents):
             try:
                 pages.append(
                     {

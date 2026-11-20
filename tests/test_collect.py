@@ -1,3 +1,5 @@
+import json
+
 import httpx
 import pytest
 
@@ -52,3 +54,30 @@ def test_robots_denial_stops_before_page_fetch():
     ):
         collect_page(client, "https://wasalt.sa/en")
     assert paths == ["/robots.txt"]
+
+
+def test_refresh_reviews_every_snapshot_url_once_without_replacing_data(tmp_path, monkeypatch, capsys):
+    from app import collect
+    from app.knowledge import Knowledge
+
+    urls = list(dict.fromkeys(doc.url for doc in Knowledge.load().documents))
+    reviewed = []
+    snapshot = tmp_path / "data" / "knowledge.json"
+    snapshot.parent.mkdir()
+    snapshot.write_text("preserve existing data", encoding="utf-8")
+
+    def capture(client, url):
+        reviewed.append(url)
+        return "Synthetic review-only source text; never a replacement dataset."
+
+    monkeypatch.setattr(collect, "ROOT", tmp_path)
+    monkeypatch.setattr(collect, "collect_page", capture)
+    monkeypatch.setattr(collect.time, "sleep", lambda seconds: None)
+    collect.main()
+    assert reviewed == urls
+    assert snapshot.read_text(encoding="utf-8") == "preserve existing data"
+    assert json.loads(capsys.readouterr().out) == {
+        "collected": len(urls), "failed": 0, "snapshot_replaced": False
+    }
+    report = json.loads((tmp_path / ".private" / "collection.json").read_text(encoding="utf-8"))
+    assert all(page["status"] == "collected-for-review" for page in report["pages"])

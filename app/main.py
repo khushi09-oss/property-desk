@@ -129,7 +129,7 @@ def create_app() -> FastAPI:
         documents = knowledge.search(query)
         if not documents:
             return ChatResponse(
-                answer="I couldn't find that in the collected snapshot. Try asking about DG1, Tierra Viva, Les Vagues, Wasalt services or the captured Jeddah apartments.",
+                answer="I couldn't find that in the collected snapshot. Try a named DarGlobal development, Wasalt services, or a captured Saudi sale or rental listing.",
                 sources=[],
                 model=None,
             )
