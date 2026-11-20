@@ -27,7 +27,8 @@ Deep-copy results, expire using a monotonic clock, and reset on process restart/
 ## Interface, history and privacy
 
 - Refined cream/charcoal interface with Wasalt-purple accents, self-hosted Newsreader headings and Public Sans body text. CSS owns design tokens and responsive type/layout rules; original OFL notices are bundled.
-- One hamburger opens/closes the sidebar. Sidebar and main chat scroll independently. On mobile, the sidebar fills the viewport while the hamburger remains accessible; conversation/composer content is inert until it closes.
+- The sidebar prioritises recent chats; secondary exploration and coverage sit inside About this demo. Short welcome prompts and a compact composer reduce repeated text. Privacy and source notes expand on demand while the saved-source notice remains visible.
+- One hamburger opens/closes the sidebar. Sidebar and conversation scroll independently; the composer stays outside the conversation scroll area. On mobile, the sidebar fills the viewport while the hamburger remains accessible; conversation/composer content is inert until it closes.
 - Save completed exchanges and citations in localStorage for this origin/browser profile. Retain up to 20 conversations and the latest 40 messages each, within a 1 MB UTF-8 payload and browser quota. Restore the active conversation on reload.
 - New conversation preserves older chats; individual deletion and confirmed Clear all affect only the app's storage key. Validate stored roles, lengths and source links. Storage failure leaves the current chat usable with a visible warning.
 - No encryption, accounts, cross-device sync or server conversation database. Shared-browser access, private-mode data loss and non-atomic last-save-wins writes across tabs are limits. Other tabs do not automatically refresh their lists.
