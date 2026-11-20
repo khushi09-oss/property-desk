@@ -117,7 +117,11 @@ node --test tests/*.test.mjs
 docker build -t property-desk:local .
 ```
 
-Current local source checks passed: **64 Python tests and 17 JavaScript tests**, Ruff (including application/script security rules), mypy (eight source files), JavaScript syntax and dependency consistency. The previously verified root Docker build passed; a read-only Linux container served five HTTP routes, reported nine records, handled missing configuration explicitly and ran as UID 10001. Its files contained no local credentials or working material. The release script prepared the expected 21 runtime files. These checks made zero live inference requests. The current deployed runtime previously passed HTTP asset/health/schema checks, and cache behavior was exercised in a Linux container using synthetic model responses. A subsequent anonymous production check returned HTTP 200 for the website, health endpoint and a fresh DarGlobal answer with four sources. Free-provider availability remains variable; live cache warming is not verified. The latest local interface simplification has not been deployed or visually verified in a real browser. No inference calls are made by the automated unit tests.
+Current source checks passed: **64 Python tests and 17 JavaScript tests**, Ruff (including application/script security rules), mypy (eight source files), JavaScript syntax and dependency consistency. Unit tests make no live inference requests.
+
+The interface simplification is deployed. Vercel built the root Dockerfile successfully from the 21 allowlisted runtime files. Five anonymous public assets matched the reviewed files byte-for-byte, health reported nine records, and a fresh uncached DarGlobal request returned HTTP 200 with four sources. Real-browser visual verification remains incomplete.
+
+The previously checked read-only Linux container served five HTTP routes, handled missing configuration explicitly, and ran as UID 10001. Its inspected files contained no local credentials or working material. Cache behavior was exercised with synthetic model responses; live cache warming remains unverified.
 
 Free quotas, provider capacity and latency can interrupt this public demo. Cross-browser, real-device, full accessibility, prolonged chatbot-idle and high-load verification remain incomplete. Hosting is serverless; continuous process uptime is not claimed. See [SPEC.md](SPEC.md) for the implemented requirements and decisions.
 
